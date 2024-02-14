@@ -26,3 +26,10 @@ const fab = (n) => {
 
 }
 console.log(fab(7))
+
+//recurrsion method
+const fib = (n) => {
+    if(n <=1 ) return n
+    return fib(n-1) + fib(n-2)
+}
+console.log(fib(3));
