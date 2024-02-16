@@ -49,7 +49,6 @@ const sum = (nums, target) => {
             }
 
         }
-
     }
 }
-console.log(sum([2,7,11,15], 26));
+console.log(sum([2,7,11,15], 9));
