@@ -52,3 +52,15 @@ const sum = (nums, target) => {
     }
 }
 console.log(sum([2,7,11,15], 9));
+
+//given a & bur func shd return a value a power b
+
+const power =(a, b) => {
+    return Math.pow(a, b);
+}
+
+const a = 2;
+const b = 3;
+const resu = power(a, b);
+console.log("power is", resu); 
+
