@@ -51,16 +51,39 @@ const sum = (nums, target) => {
         }
     }
 }
-console.log(sum([2,7,11,15], 9));
+console.log(sum([2, 7, 11, 15], 9));
 
 //given a & bur func shd return a value a power b
 
-const power =(a, b) => {
+const power = (a, b) => {
     return Math.pow(a, b);
 }
 
 const a = 2;
 const b = 3;
 const resu = power(a, b);
-console.log("power is", resu); 
+console.log("power is", resu);
 
+
+//given an array of size N, print second largest distinct element from an array
+
+//i/p: [12,35,1,10,34,1] o/p: 34
+//i/p: [10,5,10] o/p: 5
+
+
+//brutr force approach 
+
+
+
+const secondLargestNumber = (arr) => {
+    const uniqueArray = Array.from(new Set(arr))
+    uniqueArray.sort((a, b) => { return b - a }) //for descending order
+
+    if (uniqueArray.length >= 2) {
+        return uniqueArray[1]
+    } else {
+        return -1
+    }
+}
+console.log(secondLargestNumber([12, 35, 1, 10, 34, 1]));
+console.log(secondLargestNumber([10, 5, 10]));
