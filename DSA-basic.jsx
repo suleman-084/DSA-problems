@@ -1,5 +1,7 @@
 //palindrome number 
 
+const { number } = require("prop-types");
+
 const palindrome = (x) => {
     return x === +x.toString().split("").reverse().join("")
 }
@@ -76,7 +78,7 @@ console.log("power is", resu);
 
 
 const secondLargestNumber = (arr) => {
-    const uniqueArray = Array.from(new Set(arr))
+    const uniqueArray = Array.from(new Set(arr)) //nlogn
     uniqueArray.sort((a, b) => { return b - a }) //for descending order
 
     if (uniqueArray.length >= 2) {
@@ -85,5 +87,27 @@ const secondLargestNumber = (arr) => {
         return -1
     }
 }
-console.log(secondLargestNumber([12, 35, 1, 10, 34, 1]));
-console.log(secondLargestNumber([10, 5, 10]));
+// console.log(secondLargestNumber([12, 35, 1, 10, 34, 1]));
+// console.log(secondLargestNumber([10, 5, 10]));
+
+//without inbuilt functions
+
+const secondlargestOptimised = (arr) => {
+    let largest = Number.NEGATIVE_INFINITY
+    let secondLargest = Number.NEGATIVE_INFINITY
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            secondLargest = largest
+            largest = arr[i]
+        } else if (arr[i] != largest && arr[i] > secondLargest) {
+             secondLargest = arr[i]
+        }
+
+
+    }
+    return secondLargest
+
+}
+console.log(secondlargestOptimised([12, 35, 1, 10, 34, 1]));
+console.log(secondlargestOptimised([10, 5, 10]));
