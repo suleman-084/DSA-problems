@@ -111,3 +111,31 @@ const secondlargestOptimised = (arr) => {
 }
 console.log(secondlargestOptimised([12, 35, 1, 10, 34, 1]));
 console.log(secondlargestOptimised([10, 5, 10]));
+
+
+const fruits = ['orange', "apple", "orange", "kiwi", "grapes", "kiwi", "orange", "grapes", "grapes", "grapes", "orange", "orange", "banana"]
+
+const fruitCount = fruits.reduce((acc,fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1
+    return acc
+  },{})
+  console.log(fruitCount)
+  
+  const sortedFruits = Object.entries(fruitCount).sort((a,b) => b[1] - a[1] )
+  console.log(sortedFruits)
+
+  //factorain of n numbers 
+
+  const factorial = (n) => {
+    // if(n === 0 || n === 1) {
+    //     return 1 
+    // }
+    let result = 1
+    for (let i=2;  i<=n; i++) {
+        result = result * i
+        // result *= i
+
+    }
+    return result
+  }
+  console.log(factorial(1));
