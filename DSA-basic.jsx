@@ -124,7 +124,7 @@ const fruitCount = fruits.reduce((acc,fruit) => {
   const sortedFruits = Object.entries(fruitCount).sort((a,b) => b[1] - a[1] )
   console.log(sortedFruits)
 
-  //factorain of n numbers 
+  //factorial of n numbers 
 
   const factorial = (n) => {
     // if(n === 0 || n === 1) {
@@ -138,4 +138,24 @@ const fruitCount = fruits.reduce((acc,fruit) => {
     }
     return result
   }
-  console.log(factorial(1));
+  console.log(factorial(1)); //time complexity O(n)
+
+  // prime number  given an integer n determine its prime or not
+// starts with 2,3,5,7......
+
+const isPrime = (n) => {
+    if(n < 2) {
+        return false
+    }
+    for (let i = 2; i < n; i++) {
+      if(n % i === 0) {
+        return false
+      }
+        
+    }
+    return true
+
+}
+console.log(isPrime(6));
+console.log(isPrime(3)); // time complexity O(n)
+
