@@ -101,7 +101,7 @@ const secondlargestOptimised = (arr) => {
             secondLargest = largest
             largest = arr[i]
         } else if (arr[i] != largest && arr[i] > secondLargest) {
-             secondLargest = arr[i]
+            secondLargest = arr[i]
         }
 
 
@@ -115,47 +115,58 @@ console.log(secondlargestOptimised([10, 5, 10]));
 
 const fruits = ['orange', "apple", "orange", "kiwi", "grapes", "kiwi", "orange", "grapes", "grapes", "grapes", "orange", "orange", "banana"]
 
-const fruitCount = fruits.reduce((acc,fruit) => {
+const fruitCount = fruits.reduce((acc, fruit) => {
     acc[fruit] = (acc[fruit] || 0) + 1
     return acc
-  },{})
-  console.log(fruitCount)
-  
-  const sortedFruits = Object.entries(fruitCount).sort((a,b) => b[1] - a[1] )
-  console.log(sortedFruits)
+}, {})
+console.log(fruitCount)
 
-  //factorial of n numbers 
+const sortedFruits = Object.entries(fruitCount).sort((a, b) => b[1] - a[1])
+console.log(sortedFruits)
 
-  const factorial = (n) => {
+//factorial of n numbers 
+
+const factorial = (n) => {
     // if(n === 0 || n === 1) {
     //     return 1 
     // }
     let result = 1
-    for (let i=2;  i<=n; i++) {
+    for (let i = 2; i <= n; i++) {
         result = result * i
         // result *= i
 
     }
     return result
-  }
-  console.log(factorial(1)); //time complexity O(n)
+}
+console.log(factorial(1)); //time complexity O(n)
 
-  // prime number  given an integer n determine its prime or not
+// prime number  given an integer n determine its prime or not
 // starts with 2,3,5,7......
 
 const isPrime = (n) => {
-    if(n < 2) {
+    if (n < 2) {
         return false
     }
     for (let i = 2; i < n; i++) {
-      if(n % i === 0) {
-        return false
-      }
-        
+        if (n % i === 0) {
+            return false
+        }
+
     }
     return true
 
 }
 console.log(isPrime(6));
 console.log(isPrime(3)); // time complexity O(n)
+
+//power of 2 
+
+const isPowerBitwise = (n) => {
+    if (n < 1) {
+        return false
+    }
+ return (n & (n-1)) === 0
+}
+console.log("power is", isPowerBitwise(5));
+console.log("power is", isPowerBitwise(8)); //time O(1) as no for loop
 
