@@ -170,3 +170,13 @@ const isPowerBitwise = (n) => {
 console.log("power is", isPowerBitwise(5));
 console.log("power is", isPowerBitwise(8)); //time O(1) as no for loop
 
+//factorial number with recursive
+
+
+const factorialRecursion = (n) => {
+    if(n===0 || n === 1) {
+        return 1
+    }
+    return n * factorialRecursion(n-1)
+}
+console.log(factorialRecursion(5));
