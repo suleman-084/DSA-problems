@@ -21,3 +21,23 @@ const reverseNumber = (n) => {
     return reverseNumber1
 }
 console.log(reverseNumber(5589));
+
+//palindrome or not 
+const palindrome = (n) => {
+    let reverseNumber = 0
+    let duplicate = n
+
+    while(n>0) {
+        const lastDigit = n % 10
+        reverseNumber = (reverseNumber * 10) + lastDigit
+        n = Math.floor(n / 10)
+    }
+    if (duplicate === reverseNumber) {
+        console.log(true);
+        
+    }else{
+        console.log(false);
+    }
+   
+}
+console.log(palindrome(121));
