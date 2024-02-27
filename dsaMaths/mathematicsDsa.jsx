@@ -73,3 +73,42 @@ const divisor = (n) => {
     }
 }
 divisor(2)
+
+//prime number
+
+const prime = (n) => {
+    let counter = 0
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            counter++
+        }
+    }
+    if (counter === 2) {
+        return true
+
+    } else {
+        return false
+    }
+
+}
+console.log(prime(2));
+
+
+//gcd or hcf
+
+
+const gcd = (a, b) => {
+    while (a > 0 && b > 0) {
+        if (a > b) {
+            a = a % b
+        } else {
+            b = b % a
+        }
+    }
+    if (a === 0) {
+        return b
+    }
+    return a
+}
+console.log(gcd(52,10));
+//tc: O(log base φ (min(a,b)))
