@@ -20,12 +20,41 @@
 
 // print from n to 1 
 
-const nonLinearly = (i,n) => {
-    if (i < 1) {
-        return  
-    }else {
-        console.log(i);
-        nonLinearly(i-1, n)
+// const nonLinearly = (i, n) => {
+//     if (i < 1) {
+//         return
+//     } else {
+//         console.log(i);
+//         nonLinearly(i - 1, n)
+
+
+//     }
+// }
+// nonLinearly(1, 5)
+
+
+//print 1 to n without using  i +1 with backtrack
+
+// const backtrack = (i, n) => {
+//     if (i < 1) {
+//         return
+//     } else {
+
+//         backtrack(i - 1, n)
+//         console.log(i);
+
+//     }
+// }
+// backtrack(5, 5) //o/p = 1 2 3 4 5
+
+const numberTrack = (i,n) => {
+    if (i > n) {
+        return    
+    }
+    else {
+        numberTrack(i + 1, n)
+            console.log(i);
+       
     }
 }
-nonLinearly(4,1)
+numberTrack(1,4)
