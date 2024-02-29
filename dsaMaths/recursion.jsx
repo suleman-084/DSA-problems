@@ -55,7 +55,7 @@
 //     else {
 //         numberTrack(i + 1, n)
 //             console.log(i);
-       
+
 //     }
 // }
 // numberTrack(1,4)
@@ -64,32 +64,49 @@
 //parameterised way
 
 
-const parameterisedWay =(i,sum) => {
+const parameterisedWay = (i, sum) => {
     if (i < 1) {
         console.log(sum);
-        return 
-    }else {
-        parameterisedWay(i-1, sum+i)
+        return
+    } else {
+        parameterisedWay(i - 1, sum + i)
     }
 
 }
-parameterisedWay(3,0)
+parameterisedWay(3, 0)
 
 const functionalWay = (n) => {
-    if (n===0) {
-        return 0        
-    }else {
-    return n + functionalWay( n-1)
+    if (n === 0) {
+        return 0
+    } else {
+        return n + functionalWay(n - 1)
     }
 }
 console.log(functionalWay(4));
 
 
 const factorial = (n) => {
-    if (n===0) {return 1
-        
-    }else {
-        return n * factorial(n-1)
+    if (n === 0) {
+        return 1
+
+    } else {
+        return n * factorial(n - 1)
     }
 }
 console.log(factorial(4));
+
+
+//reverse of array 
+const revArray = (arr,l,r) => {
+    if (l >= r) {
+        return
+    }else {
+        let temp = arr[l]
+        arr[l] = arr[r]
+        arr[r] = temp
+        revArray(arr,l+1,r-1)
+    }
+}
+let arr = [1,2,3,4,5]
+revArray(arr,0,arr.length - 1);
+console.log(arr);
