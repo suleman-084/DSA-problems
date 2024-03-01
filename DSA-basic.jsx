@@ -1,6 +1,6 @@
 //palindrome number 
 
-const { number } = require("prop-types");
+const { number } = ("prop-types");
 
 const palindrome = (x) => {
     return x === +x.toString().split("").reverse().join("")

@@ -57,7 +57,7 @@ const armStrong = (n) => {
         return true;
     } else {
         return false;
-    } s
+    } 
 }
 console.log(armStrong(371));
 
@@ -65,7 +65,7 @@ console.log(armStrong(371));
 //print all divisors
 
 const divisor = (n) => {
-    for (let i = 0; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         if (n % i === 0) {
             console.log(i);
 
@@ -91,7 +91,8 @@ const prime = (n) => {
     }
 
 }
-console.log(prime(2));
+console.log("prime",prime(2));
+console.log("prime",prime(0));
 
 
 //gcd or hcf
@@ -111,4 +112,4 @@ const gcd = (a, b) => {
     return a
 }
 console.log(gcd(52,10));
-//tc: O(log base φ (min(a,b)))
+//tc: O(log base φ(min(a,b)))
