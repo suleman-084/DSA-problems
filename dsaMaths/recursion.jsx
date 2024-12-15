@@ -33,32 +33,32 @@ const nonLinearly = (i, n) => {
 nonLinearly(5, 1)
 
 
-// // print 1 to n without using  i +1 with backtrack
+// print 1 to n without using  i +1 with backtrack
 
-// const backtrack = (i, n) => {
-//     if (i < 1) {
-//         return
-//     } else {
+const backtrack = (i, n) => {
+    if (i < 1) {
+        return
+    } else {
 
-//         backtrack(i - 1, n)
-//         console.log(i);
+        backtrack(i - 1, n)
+        console.log(i);
 
-//     }
-// }
-// backtrack(5, 5) //o/p = 1 2 3 4 5
+    }
+}
+backtrack(5, 5) //o/p = 1 2 3 4 5
 
 // // print n to 1 without using  i -1 with backtrack
-// const numberTrack = (i,n) => {
-//     if (i > n) {
-//         return    
-//     }
-//     else {
-//         numberTrack(i + 1, n)
-//             console.log(i);
+const numberTrack = (i,n) => {
+    if (i > n) {
+        return    
+    }
+    else {
+        numberTrack(i + 1, n)
+            console.log(i);
 
-//     }
-// }
-// numberTrack(1,4)
+    }
+}
+numberTrack(1,4)
 
 //sum of first n number n=3 o/p = 6
 //parameterised way
